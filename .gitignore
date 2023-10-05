@@ -1,0 +1,5 @@
+# Ignore app images
+images
+
+# Ignore Node Modules
+node_modules
