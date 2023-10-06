@@ -1,0 +1,10 @@
+#home-page {
+    background-image: url(./../images/woman-witht-yellow-headphones.jpg);
+    height: 45.1vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
