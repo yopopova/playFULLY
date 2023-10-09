@@ -1,0 +1,35 @@
+footer {
+    background-color: #000000;
+    padding: 5px 10px;
+}
+
+footer > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer > div > p {
+    color: #ffffff;
+}
+
+footer > div > p > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #EEBF3D;
+}
+
+/* Laptops */
+@media screen and (max-width: 992px) {
+    footer > div {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+}
+
+/* Mobiles */
+@media screen and (max-width: 480px) {
+    footer > div > p {
+        font-size: 0.8rem;
+    }
+}
