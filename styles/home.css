@@ -27,3 +27,26 @@
 #home-info > h1 > span:nth-child(2) {
     font-size: 5rem;
 }
+
+/* Large Screens */
+@media screen and (max-width: 1600px) {
+    #home-info > h1 > span:first-child,
+    #home-info > h1 > span:last-child {
+        font-size: 8rem;
+    }
+
+    #home-info > h1 > span:nth-child(2) {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #home-info > h1 > span:first-child,
+    #home-info > h1 > span:last-child {
+        font-size: 6rem;
+    }
+
+    #home-info > h1 > span:nth-child(2) {
+        font-size: 4rem;
+    }
+}
