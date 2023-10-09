@@ -1,29 +1,29 @@
 #home-page {
-    background-image: url(./../images/woman-witht-yellow-headphones.jpg);
-    height: 45.1vw;
+    background-image: url(./../images/home-bg.jpg);
+    min-height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
 }
 
 #home-info {
-    margin-right: 200px;
+    margin-top: 200px;
 }
 
 #home-info > h1 {
-    display: flex;
-    flex-direction: column;
+    color: #ffffff;
+    text-shadow: 1px 0 10px #000000;
 }
 
 #home-info > h1 > span:first-child,
 #home-info > h1 > span:last-child {
-    font-size: 6em;
+    font-size: 10rem;
     text-transform: uppercase;
 }
 
 #home-info > h1 > span:nth-child(2) {
-    font-size: 3em;
+    font-size: 5rem;
 }
