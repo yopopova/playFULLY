@@ -71,3 +71,24 @@
         font-size: 4rem;
     }
 }
+
+/* Tablets */
+@media screen and (max-width: 768px) {
+    #home-info {
+        margin-top: 400px;
+    }
+
+    #home-info > h1 > span {
+        display: flex;
+        justify-content: center;
+    }
+
+    #home-info > h1 > span:first-child,
+    #home-info > h1 > span:last-child {
+        font-size: 6rem;
+    }
+
+    #home-info > h1 > span:nth-child(2) {
+        font-size: 3rem;
+    }
+}
