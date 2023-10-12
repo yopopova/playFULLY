@@ -19,18 +19,32 @@ nav {
     width: 200px;
 }
 
-#app-nav > ul > li {
+#nav-menu > li {
     display: inline-block;
     list-style: none;
     padding: 20px;
 }
 
-#app-nav > ul > li > a {
+#nav-menu > li > a {
     text-decoration: none;
     color: #ffffff;
 }
 
-#app-nav > ul > li > a:hover {
-    text-decoration: underline;
+#nav-menu > li > a:hover {
     color: #EEBF3D;
+}
+
+#hamburger-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
 }
