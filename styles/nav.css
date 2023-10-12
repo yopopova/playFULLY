@@ -48,3 +48,52 @@ nav {
     transition: all 0.3s ease-in-out;
     background-color: #ffffff;
 }
+
+@media screen and (max-width: 992px) {
+    #nav-menu {
+        position: fixed;
+        left: 100%;
+        top: 55px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #000000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    #nav-menu.active {
+        left: 0;
+    }
+
+    #nav-menu > li {
+        display: block;
+    }
+
+    #hamburger-menu {
+        display: block;
+    }
+
+    #hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        justify-content: center;
+    }
+
+    #logo > a > img {
+        height: 30px;
+        width: 150px;
+    }
+}
