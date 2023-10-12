@@ -88,10 +88,6 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-    nav {
-        justify-content: center;
-    }
-
     #logo > a > img {
         height: 30px;
         width: 150px;
