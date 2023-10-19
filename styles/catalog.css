@@ -1,0 +1,20 @@
+#catalogPage {
+    background-image: linear-gradient(45deg, rgb(250,193,85) 0%,rgb(253,250,200) 75%,rgb(243,236,143) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45.1vw;
+    gap: 30px;
+}
+
+.card-box {
+    display: flex;
+    height: 15vw;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+}
