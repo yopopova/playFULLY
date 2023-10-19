@@ -18,3 +18,16 @@
     color: #ffffff;
     border-radius: 10px;
 }
+
+.card-box > img {
+    width: 250px;
+    height: 250px;
+    margin-right: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+}
+
+.text-center > p > span {
+    color: #EEBF3D;
+    font-weight: 600;
+}
