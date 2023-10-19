@@ -3,5 +3,7 @@
 @import url(nav.css);
 
 @import url(home.css);
+@import url(catalog.css);
+@import url(login-register.css);
 
 @import url(footer.css);
