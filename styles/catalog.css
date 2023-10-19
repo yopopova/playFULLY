@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 45.1vw;
+    min-height: 90vh;
     gap: 30px;
 }
 
@@ -27,12 +27,12 @@
     border-radius: 5px;
 }
 
-.text-center > p > span {
+.album-info > p > span {
     color: #EEBF3D;
     font-weight: 600;
 }
 
-.btn-group {
+.details-btn {
     background-color: #EEBF3D;
     margin-top: 40px;
     width: 70px;
@@ -41,10 +41,17 @@
     border-radius: 5px;
 }
 
-.btn-group > a {
+.details-btn > a {
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
     display:  flex;
 }
+
+#no-albums {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
