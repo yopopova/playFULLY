@@ -9,7 +9,8 @@
 
 .card-box {
     display: flex;
-    height: 15vw;
+    height: 30vh;
+    width: 50vw;
     justify-content: center;
     align-items: center;
     background: #ffffff;
@@ -55,3 +56,13 @@
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 992px) {
+    #catalogPage {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .card-box {
+        width: 55vw;
+    }
+}
