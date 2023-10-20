@@ -66,3 +66,25 @@
         width: 55vw;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .card-box {
+        height: auto;
+        width: 40vw;
+        flex-direction: column;
+    }
+
+    .card-box > img {
+        height: 150px;
+        width: 150px;
+        margin: 10px 0 20px;
+    }
+
+    .album-info {
+        margin-bottom: 20px;
+    }
+
+    .card-box > div > .details-btn {
+        margin: auto;
+    }
+}
