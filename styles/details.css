@@ -57,3 +57,48 @@
     border-radius: 5px;
     padding: 7px 10px;
 }
+
+@media screen and (max-width: 1600px) {
+    .albumCover > img {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .albumCover > img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .albumText > h1 {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        width: 60%;
+    }
+
+    .albumCover > img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .albumText > h1 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper {
+        width: 70%;
+    }
+}
