@@ -11,3 +11,35 @@
 - `Register` view where the user can make registration
 - `Login` view where the user can log into his profile
 - `Logout` option where the user can logout from his profile
+
+## App Details
+
+The app is based on:
+
+- JavaScript
+- RESTful API
+- Lit
+- HTML & CSS
+- Gradient Magic Backgrounds
+
+## Database
+
+Please, note that the application has no database, and app data is not persistent. The DB is based on a local server by [Viktor Kostadinov](https://github.com/viktorpts). Every album record in the database has the following structure:
+
+```javascript
+let seedData = {
+    albums: {
+        "albumId": {
+            "_ownerId": "ownerId",
+            "name": "Album Name",
+            "artist": "Artist Name",
+            "genre": "Album Genre",
+            "imgUrl": "/images/albumImage.png",
+            "price": "Album Price",
+            "releaseDate": "Release Date",
+            "description": "Album Description",
+            "_createdOn": 0101010101,
+        }
+    }
+}
+```
