@@ -43,3 +43,19 @@ let seedData = {
     }
 }
 ```
+
+## RESTful API
+
+For the app data, the following endpoints are supported:
+
+- `GET /data/albums` - to get all the records from the database
+- `POST /data/albums` - to create an album
+- `PUT /data/albums/:id` - to edit an album
+- `DELETE /data/albums/:id` - to delete an album
+- `GET /data/albums + query string` - to search in the catalog
+
+For the user, the following endpoints are supported:
+
+- `POST /users/register` - for user registration
+- `POST /users/login` - for user login
+- `GET /users/logout` - for user logout
