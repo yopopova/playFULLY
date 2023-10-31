@@ -1,0 +1,25 @@
+#searchPage {
+    background-image: radial-gradient(circle at 58% 50%, rgba(250,193,85, 0.1) 0%, rgba(250,193,85, 0.1) 60%,transparent 60%, transparent 98%,transparent 98%, transparent 100%),radial-gradient(circle at 36% 79%, rgba(250,193,85, 0.1) 0%, rgba(250,193,85, 0.1) 49%,transparent 49%, transparent 99%,transparent 99%, transparent 100%),radial-gradient(circle at 48% 23%, rgba(250,193,85, 0.1) 0%, rgba(250,193,85, 0.1) 50%,transparent 50%, transparent 87%,transparent 87%, transparent 100%),radial-gradient(circle at 55% 69%, rgba(250,193,85, 0.1) 0%, rgba(250,193,85, 0.1) 3%,transparent 3%, transparent 19%,transparent 19%, transparent 100%),radial-gradient(circle at 38% 69%, rgba(250,193,85, 0.1) 0%, rgba(250,193,85, 0.1) 15%,transparent 15%, transparent 33%,transparent 33%, transparent 100%),linear-gradient(45deg, rgb(253,250,200),rgb(243,236,143));
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    margin: 0 30px 100px;
+}
+
+.search-result {
+    width: 50vw ;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.no-result {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
