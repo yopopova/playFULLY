@@ -18,7 +18,8 @@ The app is based on:
 
 - JavaScript
 - RESTful API
-- Lit
+- lit-html
+- page
 - HTML & CSS
 - Gradient Magic Backgrounds
 
@@ -59,6 +60,24 @@ For the user, the following endpoints are supported:
 - `POST /users/register` - for user registration
 - `POST /users/login` - for user login
 - `GET /users/logout` - for user logout
+
+The included REST service comes with the following premade user accounts, which you may use for login:
+
+```javascript
+{
+    "email": "peter@abv.bg",
+    "password": "123456" 
+}
+```
+
+and
+
+```javascript
+{
+    "email": "john@abv.bg",
+    "password": "123456" 
+}
+```
 
 ## Responsive Design
 
