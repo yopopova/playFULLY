@@ -1,5 +1,9 @@
-# Ignore app images
+# Ignore images folder
 images
 
-# Ignore Node Modules
+# Ignore Node Modules folder
 node_modules
+package-lock.json
+
+# Ignore Server folder
+server
