@@ -4,7 +4,7 @@ import page from '../node_modules/page/page.mjs';
 import { updateNav } from "./views/nav.js";
 import { showHome } from "./views/home.js";
 
-const main = document.getElementById('main-content');
+const main = document.querySelector('main');
 
 page(decorateContext);
 page('/index.html', '/');
