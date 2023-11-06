@@ -1,63 +1,34 @@
 import { html, nothing } from "../../node_modules/lit-html/lit-html.js";
 import { getAll } from "../api/data.js";
 
-const catalogTemplate = () => html`
- <section id="catalogPage">
+const catalogTemplate = (albums) => html`
+    <section id="catalogPage">
+        ${albums.length === 0 ? html`
+            <p id="no-albums">No albums in catalog</p>` : 
+        albums.map(album => albumCardTemplate(album, hasUser))}
+    </section>`
 
-<div class="card-box">
-    <img src="./../images/BrandiCarlile.png">
-    <div>
-        <div class="album-info">
-            <p class="name"><span>Name: </span>In These Silent Days</p>
-            <p class="artist"><span>Artist: </span>Brandi Carlile</p>
-            <p class="genre"><span>Genre: </span>Low Country Sound Music</p>
-            <p class="price"><span>Price: </span>$12.80</p>
-            <p class="date"><span>Release Date: </span>October 1, 2021</p>
-        </div>
-        <div class="details-btn">
-            <a href="#" id="details">Details</a>
-        </div>
-    </div>
-</div>
+const albumCardTemplate = (album, hasUser) => html`
+    <div class="card-box">
+        <img src=${album.imgUrl}>
+        <div>
+            <div class="album-info">
+                <p class="name"><span>Name: </span>Melodrama</p>
+                <p class="artist"><span>Artist: </span>Lorde</p>
+                <p class="genre"><span>Genre: </span>Pop Music</p>
+                <p class="price"><span>Price: </span>$7.33</p>
+                <p class="date"><span>Release Date: </span>June 16, 2017</p>
+            </div>
 
-<div class="card-box">
-    <img src="./../images/pinkFloyd.jpg">
-    <div>
-        <div class="album-info">
-            <p class="name"><span>Name: </span>The Dark Side of the Moon</p>
-            <p class="artist"><span>Artist: </span>Pink Floyd</p>
-            <p class="genre"><span>Genre: </span>Rock Music</p>
-            <p class="price"><span>Price: </span>$28.75</p>
-            <p class="date"><span>Release Date: </span>March 1, 1973</p>
+            ${hasUser ? html`
+                <div class="btn-group">
+                    <a href="/details/${album._id}" id="details">Details</a>
+                </div>`
+            : nothing}
         </div>
-        <div class="details-btn">
-            <a href="#" id="details">Details</a>
-        </div>
-    </div>
-</div>
-
-<div class="card-box">
-    <img src="./../images/Lorde.jpg">
-    <div>
-        <div class="album-info">
-            <p class="name"><span>Name: </span>Melodrama</p>
-            <p class="artist"><span>Artist: </span>Lorde</p>
-            <p class="genre"><span>Genre: </span>Pop Music</p>
-            <p class="price"><span>Price: </span>$7.33</p>
-            <p class="date"><span>Release Date: </span>June 16, 2017</p>
-        </div>
-        <div class="details-btn">
-            <a href="#" id="details">Details</a>
-        </div>
-    </div>
-</div>
-
-<!--No albums in catalog-->
-<p id="no-albums">No albums in catalog</p>
-
-</section>`
+    </div>`
 
 export async function showCatalog(ctx) {
     const albums = await getAll();
-    ctx.render(catalogTemplate(albums));
+    ctx.render(catalogTemplate([]));
 }
