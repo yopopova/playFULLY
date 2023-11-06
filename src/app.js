@@ -3,6 +3,7 @@ import page from '../node_modules/page/page.mjs';
 
 import { updateNav } from "./views/nav.js";
 import { showHome } from "./views/home.js";
+import { showCatalog } from "./views/catalog.js";
 
 const main = document.querySelector('main');
 
@@ -10,7 +11,7 @@ page(decorateContext);
 page('/index.html', '/');
 page('/', showHome);
 
-page('/catalog', () => console.log('catalog'));
+page('/catalog', showCatalog);
 page('/catalog/:id', () => console.log('details'));
 page('/edit/:id', () => console.log('edit'));
 
