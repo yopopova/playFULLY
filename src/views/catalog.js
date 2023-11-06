@@ -1,4 +1,5 @@
 import { html, nothing } from "../../node_modules/lit-html/lit-html.js";
+import { getAll } from "../api/data.js";
 
 const catalogTemplate = () => html`
  <section id="catalogPage">
@@ -57,5 +58,6 @@ const catalogTemplate = () => html`
 </section>`
 
 export async function showCatalog(ctx) {
-    ctx.render(catalogTemplate());
+    const albums = await getAll();
+    ctx.render(catalogTemplate(albums));
 }
