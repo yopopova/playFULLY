@@ -6,6 +6,9 @@ import { showHome } from "./views/home.js";
 import { showCatalog } from "./views/catalog.js";
 import { showLogin } from "./views/login.js";
 import { showRegister } from "./views/register.js";
+import { showDetails } from "./views/details.js";
+
+import { getUserData } from "./util.js";
 
 const main = document.querySelector('main');
 
@@ -14,7 +17,7 @@ page('/index.html', '/');
 page('/', showHome);
 
 page('/catalog', showCatalog);
-page('/catalog/:id', () => console.log('details'));
+page('/catalog/:id', showDetails);
 page('/edit/:id', () => console.log('edit'));
 
 page('/create', () => console.log('create'));
