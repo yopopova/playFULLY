@@ -1,4 +1,5 @@
 import { html, nothing } from "../../node_modules/lit-html/lit-html.js";
+import { deleteById, getById } from "../api/data.js";
 
 const detailsTemplate = (album, isOwner, onDelete) => html`
     <section id="detailsPage">
@@ -25,3 +26,20 @@ const detailsTemplate = (album, isOwner, onDelete) => html`
             </div>
         </div>
     </section>`
+
+export async function showDetails(ctx) {
+    const id = ctx.params.id;
+    const album = await getById(id);
+    const isOwner = album._ownerId === ctx.user._id;
+
+    ctx.render(detailsTemplate(album, isOwner, onDelete));
+
+    async function onDelete() {
+        const choise = confirm('Are you sure you want to delete this album?');
+
+        if (choise) {
+            await deleteById(id);
+            ctx.page.redirect('/catalog');
+        }
+    }
+}
