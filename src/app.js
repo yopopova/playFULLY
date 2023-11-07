@@ -5,6 +5,7 @@ import { updateNav } from "./views/nav.js";
 import { showHome } from "./views/home.js";
 import { showCatalog } from "./views/catalog.js";
 import { showLogin } from "./views/login.js";
+import { showRegister } from "./views/register.js";
 
 const main = document.querySelector('main');
 
@@ -18,7 +19,7 @@ page('/edit/:id', () => console.log('edit'));
 
 page('/create', () => console.log('create'));
 page('/login', showLogin);
-page('/register', () => console.log('register'));
+page('/register', showRegister);
 
 updateNav();
 page.start();
@@ -26,6 +27,12 @@ page.start();
 function decorateContext(ctx, next) {
     ctx.render = renderMain;
     ctx.updateNav = updateNav;
+
+    const user = getUserData();
+
+    if (user) {
+        ctx.user = user;
+    }
 
     next();
 }
