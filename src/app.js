@@ -1,14 +1,15 @@
 import { render } from "../node_modules/lit-html/lit-html.js";
 import page from '../node_modules/page/page.mjs';
 
+import { getUserData } from "./util.js";
 import { updateNav } from "./views/nav.js";
 import { showHome } from "./views/home.js";
 import { showCatalog } from "./views/catalog.js";
 import { showLogin } from "./views/login.js";
 import { showRegister } from "./views/register.js";
+import { showCreate } from "./views/create.js";
 import { showDetails } from "./views/details.js";
-
-import { getUserData } from "./util.js";
+import { showEdit } from "./views/edit.js";
 
 const main = document.querySelector('main');
 
@@ -17,10 +18,10 @@ page('/index.html', '/');
 page('/', showHome);
 
 page('/catalog', showCatalog);
-page('/catalog/:id', showDetails);
-page('/edit/:id', () => console.log('edit'));
+page('/details/:id', showDetails);
+page('/edit/:id', showEdit);
 
-page('/create', () => console.log('create'));
+page('/create', showCreate);
 page('/login', showLogin);
 page('/register', showRegister);
 
