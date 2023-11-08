@@ -1,5 +1,8 @@
 import { html } from "../../node_modules/lit-html/lit-html.js";
 
+import { createAlbum } from "../api/data.js";
+import { createSubmitHandler } from "../util.js";
+
 const createTemplate = (onCreate) => html`
     <section id="login">
         <form @submit=${onCreate}>
@@ -31,3 +34,26 @@ const createTemplate = (onCreate) => html`
             </fieldset>
         </form>
     </section>`
+
+export function showCreate(ctx) {
+    ctx.render(createTemplate(createSubmitHandler(onCreate)));
+
+    async function onCreate({ name, imgUrl, price, releaseDate, artist, genre, description }, form) {
+        if (name == '' || imgUrl == '' || price == '' || releaseDate == '' || artist == '' || genre == '' || description == '') {
+            return alert('All fields are required!');
+        }
+
+        await createAlbum({
+            name,
+            imgUrl,
+            price,
+            releaseDate,
+            artist,
+            genre,
+            description
+        });
+
+        form.reset();
+        ctx.page.redirect('/catalog');
+    }
+}
