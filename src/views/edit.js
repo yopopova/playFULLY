@@ -1,4 +1,6 @@
 import { html } from "../../node_modules/lit-html/lit-html.js";
+import { editAlbum, getById } from "../api/data.js";
+import { createSubmitHandler } from "../util.js";
 
 const editTemplate = () => html`
     <section id="login">
@@ -33,5 +35,28 @@ const editTemplate = () => html`
         </form>
     </section>`
 
+export async function showEdit(ctx) {
+    const id = ctx.params.id;
+    const album = await getById(id);
 
-     
+    ctx.render(editTemplate(album, createSubmitHandler(onEdit)));
+
+    async function onEdit({ name, imgUrl, price, releaseDate, artist, genre, description }, form) {
+        if (name == '' || imgUrl == '' || price == '' || releaseDate == '' || artist == '' || genre == '' || description == '') {
+            return alert('All fields are required!');
+        }
+
+        await editAlbum(id, {
+            name,
+            imgUrl,
+            price,
+            releaseDate,
+            artist,
+            genre,
+            description
+        })
+
+        form.reset();
+        ctx.page.redirect('/details/' + id);
+    }
+}
