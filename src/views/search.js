@@ -37,6 +37,15 @@ const createCard = (album, hasUser) => html`
         </div>
     </div>`
 
+const createResultTemplate = (albums, hasUser) => {
+    return html`
+        ${albums.length > 0 ? html`
+            ${albums.map(album => createCard(album, hasUser))}
+        ` : html`
+        <p class="no-result">No result</p>`
+        }`
+}
+
 export async function showSearch(ctx) {
     ctx.render(searchTemplate(false, onSearch));
 

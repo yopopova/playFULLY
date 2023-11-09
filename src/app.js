@@ -10,6 +10,7 @@ import { showRegister } from "./views/register.js";
 import { showCreate } from "./views/create.js";
 import { showDetails } from "./views/details.js";
 import { showEdit } from "./views/edit.js";
+import { showSearch } from "./views/search.js";
 
 const main = document.querySelector('main');
 
@@ -20,6 +21,8 @@ page('/', showHome);
 page('/catalog', showCatalog);
 page('/details/:id', showDetails);
 page('/edit/:id', showEdit);
+
+page('/search', showSearch);
 
 page('/create', showCreate);
 page('/login', showLogin);
