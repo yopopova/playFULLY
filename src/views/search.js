@@ -1,4 +1,5 @@
 import { html, nothing } from "../../node_modules/lit-html/lit-html.js";
+import { searchAlbum } from "../api/data.js";
 
 const searchTemplate = () => html`
     <section id="searchPage">
@@ -34,3 +35,21 @@ const searchTemplate = () => html`
             <p class="no-result">No result</p>
         </div>
     </section>`
+
+
+export async function showSearch(ctx) {
+    ctx.render(searchTemplate(false, onSearch));
+
+    async function onSearch(event) {
+        const searchInput = document.getElementById('search-input');
+        const query = searchInput.value;
+
+        if(!query) {
+            return alert('Enter some word');
+        }
+
+        const albums = await searchAlbum(query);
+
+        ctx.render(searchTemplate(true, onSearch, albums, !!ctx.user));
+    }
+}

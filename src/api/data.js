@@ -19,3 +19,7 @@ export async function createAlbum(albumData) {
 export async function editAlbum(id, albumData) {
     return put('/data/albums/' + id, albumData);
 }
+
+export async function searchAlbum(query) {
+    return get(`/data/albums?where=name%20LIKE%20%22${query}%22`);
+}
