@@ -1,41 +1,21 @@
 import { html, nothing } from "../../node_modules/lit-html/lit-html.js";
 import { searchAlbum } from "../api/data.js";
 
-const searchTemplate = () => html`
+const searchTemplate = (isClicked, handler, albums, hasUser) => html`
     <section id="searchPage">
-        <h1>Search album by name:</h1>
+        <h1>Search by Name</h1>
 
         <div class="search">
-            <input id="search-input" type="text" name="search" placeholder="Enter album name">
-            <button class="button-list">Search</button>
+            <input id="search-input" type="text" name="search" placeholder="Enter desired albums's name">
+            <button @click=${handler} class="button-list">Search</button>
         </div>
 
         <h2>Results:</h2>
 
-        <!--Show after click Search button-->
         <div class="search-result">
-            <!--If have matches-->
-            <div class="card-box">
-                <img src="../images/BrandiCarlile.png">
-                <div>
-                    <div class="album-info">
-                        <p class="name"><span>Name: </span>In These Silent Days</p>
-                        <p class="artist"><span>Artist: </span>Brandi Carlile</p>
-                        <p class="genre"><span>Genre: </span>Low Country Sound Music</p>
-                        <p class="price"><span>Price: </span>$12.80</p>
-                        <p class="date"><span>Release Date: </span>October 1, 2021</p>
-                    </div>
-                    <div class="details-btn">
-                        <a href="#" id="details">Details</a>
-                    </div>
-                </div>
-            </div>
-
-            <!--If there are no matches-->
-            <p class="no-result">No result</p>
+            ${isClicked ? createResultTemplate(albums, hasUser) : nothing}
         </div>
     </section>`
-
 
 export async function showSearch(ctx) {
     ctx.render(searchTemplate(false, onSearch));
