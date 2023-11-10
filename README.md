@@ -79,14 +79,6 @@ and
 }
 ```
 
-## Responsive Design
-
-The app has a responsive design for different devices.
-
-## Mobile View
-
-![playFULLY-mobile](https://github.com/yopopova/playFULLY/assets/59256039/9bdd3446-0e32-4f7b-838c-686066c79206)
-
 ## Desktop View
 
 ![playFULLY-desktop](https://github.com/yopopova/playFULLY/assets/59256039/37e464a4-bead-4536-836e-6a24456cfe83)
