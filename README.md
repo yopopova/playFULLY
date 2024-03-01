@@ -79,6 +79,7 @@ and
 }
 ```
 
-## Desktop View
+## App Views
 
-![playFULLY-desktop](https://github.com/yopopova/playFULLY/assets/59256039/37e464a4-bead-4536-836e-6a24456cfe83)
+<!-- ![playFULLY-desktop](https://github.com/yopopova/playFULLY/assets/59256039/37e464a4-bead-4536-836e-6a24456cfe83) -->
+![playFULLY_screenshots](https://github.com/yopopova/playFULLY/assets/59256039/a95131c4-8034-4f0b-86df-c43daf12d245)
