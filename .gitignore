@@ -1,12 +1,2 @@
-# Ignore Images folder
-images
-
-# Ignore HTML app pages
-pages
-
 # Ignore Node Modules folder
 node_modules
-package-lock.json
-
-# Ignore Server folder
-server
