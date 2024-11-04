@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalog</title>
+    <link rel="shortcut icon" type="image/png" href="./../images/favicon.png">
+    <link rel="stylesheet" href="/styles/style.css"></link>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="#">
+                    <img src="./../images/logo.png" alt="playfully-logo">
+                </a>
+            </div>
+
+            <div id="app-nav">
+                <ul id="nav-menu">
+                    <!--All users-->
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Search</a></li>
+
+                    <!--Only guest-->
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+
+                    <!--Only user-->
+                    <li><a href="#">Create Album</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+
+            <div id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="catalogPage">
+
+        <div class="card-box">
+            <img src="./../images/BrandiCarlile.png">
+            <div>
+                <div class="album-info">
+                    <p class="name"><span>Name: </span>In These Silent Days</p>
+                    <p class="artist"><span>Artist: </span>Brandi Carlile</p>
+                    <p class="genre"><span>Genre: </span>Low Country Sound Music</p>
+                    <p class="price"><span>Price: </span>$12.80</p>
+                    <p class="date"><span>Release Date: </span>October 1, 2021</p>
+                </div>
+                <div class="details-btn">
+                    <a href="#" id="details">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-box">
+            <img src="./../images/pinkFloyd.jpg">
+            <div>
+                <div class="album-info">
+                    <p class="name"><span>Name: </span>The Dark Side of the Moon</p>
+                    <p class="artist"><span>Artist: </span>Pink Floyd</p>
+                    <p class="genre"><span>Genre: </span>Rock Music</p>
+                    <p class="price"><span>Price: </span>$28.75</p>
+                    <p class="date"><span>Release Date: </span>March 1, 1973</p>
+                </div>
+                <div class="details-btn">
+                    <a href="#" id="details">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-box">
+            <img src="./../images/Lorde.jpg">
+            <div>
+                <div class="album-info">
+                    <p class="name"><span>Name: </span>Melodrama</p>
+                    <p class="artist"><span>Artist: </span>Lorde</p>
+                    <p class="genre"><span>Genre: </span>Pop Music</p>
+                    <p class="price"><span>Price: </span>$7.33</p>
+                    <p class="date"><span>Release Date: </span>June 16, 2017</p>
+                </div>
+                <div class="details-btn">
+                    <a href="#" id="details">Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!--No albums in catalog-->
+        <p id="no-albums">No albums in catalog</p>
+
+    </section>
+
+    <footer>
+        <div>
+            <p>Application design and development by <a href="https://github.com/yopopova" target="_blank">Yoanna Popova</a>.</p>
+            <p>&copy;playFULLY 2023. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./../hamburger-menu.js"></script>
+</body>
+
+</html>

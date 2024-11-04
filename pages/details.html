@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <link rel="shortcut icon" type="image/png" href="./../images/favicon.png">
+    <link rel="stylesheet" href="/styles/style.css"></link>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="logo">
+                <a href="#">
+                    <img src="./../images/logo.png" alt="playfully-logo">
+                </a>
+            </div>
+
+            <div id="app-nav">
+                <ul id="nav-menu">
+                    <!--All users-->
+                    <li><a href="#">Catalog</a></li>
+                    <li><a href="#">Search</a></li>
+
+                    <!--Only guest-->
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Register</a></li>
+
+                    <!--Only user-->
+                    <li><a href="#">Create Album</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </div>
+
+            <div id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="detailsPage">
+        <div class="wrapper">
+            <div class="albumCover">
+                <img src="../images/Lorde.jpg">
+            </div>
+
+            <div class="albumInfo">
+                <div class="albumText">
+                    <!-- h1 is the album name -->
+                    <h1>Melodrama</h1>
+                    <p><span>Artist:</span> Lorde</p>
+                    <p><span>Genre:</span> Pop Music</p>
+                    <p><span>Price:</span> $7.33</p>
+                    <p><span>Date:</span> June 16, 2017</p>
+                    <p><span>Description:</span> Melodrama is the second studio album by New Zealand singer-songwriter Lorde. It was released on 16 June 2017 by Lava and Republic Records and distributed through Universal.</p>
+                </div>
+
+                <!-- Only for registered user and creator of the album-->
+                <div class="actionBtns">
+                    <a href="#" class="edit">Edit</a>
+                    <a href="#" class="remove">Delete</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>Application design and development by <a href="https://github.com/yopopova" target="_blank">Yoanna Popova</a>.</p>
+            <p>&copy;playFULLY 2023. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./../hamburger-menu.js"></script>
+</body>
+
+</html>
