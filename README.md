@@ -82,3 +82,9 @@ and
 ## App Views
 
 ![playFULLY_screenshots](https://github.com/yopopova/playFULLY/assets/59256039/a95131c4-8034-4f0b-86df-c43daf12d245)
+
+<!-- Desktop View -->
+<!-- ![playFULLY-desktop](https://github.com/yopopova/playFULLY/assets/59256039/37e464a4-bead-4536-836e-6a24456cfe83) -->
+
+<!-- Mobile View -->
+<!-- ![playFULLY-mobile](https://github.com/yopopova/playFULLY/assets/59256039/9bdd3446-0e32-4f7b-838c-686066c79206) -->
